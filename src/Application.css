@@ -1,0 +1,48 @@
+*
+{
+	font-family: 'Abel', sans-serif;
+}
+
+body
+{
+	margin: 0;
+	padding: 0;
+}
+
+p, h1, h2, h3, h4, h5, h6
+{
+	margin: 0;
+}
+
+@media screen and (max-width: 640px) 
+{
+	p, h4
+	{
+		font-size: 0.85em;
+	}
+
+	h1
+	{
+		font-size: 1.9em;
+	}
+
+	h2
+	{
+		font-size: 1.4em;
+	}
+
+	h3
+	{
+		font-size: 1em;
+	}
+
+	h5
+	{
+		font-size: 0.75em;
+	}
+
+	h6
+	{
+		font-size: 0.6em;
+	}
+}

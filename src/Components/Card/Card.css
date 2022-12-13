@@ -1,0 +1,28 @@
+.Card
+{
+	display: grid;
+	grid-template-rows: 100%;
+	grid-template-columns: 20% 80%;
+}
+
+.Card_Image_Container
+{
+	place-self: center;
+}
+
+.Card_Image
+{
+    width: 100%;
+	border-radius: 8px;
+}
+
+.Card_Information
+{
+    align-self: start;
+}
+
+.Subheader
+{
+	padding-top: 0.5rem;
+    padding-bottom: 1rem;
+}

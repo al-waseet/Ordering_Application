@@ -1,0 +1,74 @@
+.Floating_Action_Button_Container
+{
+	position: fixed;
+	bottom: 25px;
+	right: 25px;
+	cursor: pointer;
+}
+
+.Floating_Action_Button
+{
+	display: flex;
+	border-radius: 2.5rem;
+	height: 5rem;
+	width: 5rem;
+    display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.Floating_Action_Button_Image
+{
+	height: 4rem;
+	width: 4rem;
+}
+
+.Cart_Items
+{
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	background-color: red;
+	border-radius: 1rem;
+	height: 2rem;
+	width: 2rem;
+	color: white;
+	position: relative;
+	top: 20px;
+	left: 50px;
+	font-weight: bold;
+    animation: Bounce 1s;
+}
+
+@keyframes Bounce 
+{
+	0% 
+	{
+		transform: scale(0);
+	}
+
+	14%
+	{
+		transform: scale(1.15);
+	}
+
+	28%
+	{
+		transform: scale(1);
+	}
+
+	42%
+	{
+		transform: scale(1.15);
+	}
+
+	70%
+	{
+		transform: scale(1);
+	}
+	100%
+	{
+		transform: scale(1);
+	}
+}

@@ -1,0 +1,33 @@
+.Categories
+{
+	padding: 0;
+	display: flex;
+	flex-direction: row;
+	align-items: flex-end;
+	justify-content: space-evenly;
+	position: sticky;
+}
+
+.Category
+{
+	cursor: pointer;
+}
+
+.Category:last-child
+{
+	margin-right: 0;
+}
+
+.Category_Image
+{
+	width: 100%;
+	max-width: 150px;
+    border-radius: 0.5rem;
+}
+
+.Category_Name
+{
+	text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}

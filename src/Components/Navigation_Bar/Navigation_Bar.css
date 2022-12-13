@@ -1,0 +1,39 @@
+.Navigation_Bar
+{
+	padding: 1rem;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	align-content: center;
+	justify-content: space-between;
+}
+
+.Link_to_the_Menu
+{
+	font-size: 2.25rem;
+	font-weight: bold;
+}
+
+.Link_to_the_Menu:link
+{
+	color: inherit;
+	text-decoration: none;
+}
+
+.Link_to_the_Menu:visited
+{
+	color: inherit;
+	text-decoration: none;
+}
+
+.Link_to_the_Menu:hover
+{
+	color: inherit;
+	text-decoration: none;
+}
+
+.Link_to_the_Menu:active
+{
+	color: inherit;
+	text-decoration: none;
+}

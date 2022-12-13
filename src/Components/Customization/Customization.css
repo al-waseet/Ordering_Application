@@ -1,0 +1,89 @@
+.Customization_Section
+{
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	transition: height 1s;
+	/*animation: Open_Customization_Section 1000ms ease-in;*/
+}
+
+.Customization_Section:last-child
+{
+	padding-bottom: 0;
+}
+
+@keyframes Open_Customization_Section
+{
+	from
+	{
+		opacity: 0;
+		height: 0;
+	}
+	to
+	{
+		opacity: 1;
+		height: 100%;
+	}
+}
+
+.Countable_Ingredients
+{
+	padding-top: 1rem;
+}
+
+.Incrementors
+{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 1rem;
+	justify-content: flex-start;
+	padding-top: 1rem;
+}
+
+.Ingredient_Container
+{
+	padding-top: 1rem;
+	display: flex;
+	align-content: center;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.Ingredient_Name
+{
+	padding-right: 1rem;
+}
+
+.Selectors
+{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 1rem;
+	justify-content: flex-start;
+	padding-top: 1rem;
+}
+
+.Notes_Container
+{
+	padding-top: 1rem;
+}
+
+.Notes
+{
+	width: 200px;
+	border: 0;
+	background-color: transparent;
+	padding-top: 1rem;
+}
+
+.Notes:focus
+{
+	border: 0;
+	outline: none;
+}
+
+.Customization_Button_Container
+{
+	padding-top: 1rem;
+}

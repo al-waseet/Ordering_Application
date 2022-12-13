@@ -1,0 +1,105 @@
+.Menu
+{
+	padding-top: 1rem;
+}
+
+.Menu_Item
+{
+	margin-left: 1rem;
+	margin-right: 1rem;
+	padding-bottom: 0.5rem;
+	padding-top: 0.5rem
+}
+
+.Menu_Item:first-child
+{
+	margin-top: 1rem;
+}
+
+.Menu_Item:not(:first-child)
+{
+	margin-top: 0;
+}
+
+.Menu_Item:last-child
+{
+	padding-bottom: 1rem;
+	border-bottom: 0 !important;
+}
+
+.Card_Container
+{
+	cursor: pointer;
+	display: grid;
+	grid-template-rows: 100%;
+	grid-template-columns: 95% 5%;
+}
+
+@media screen and (max-width: 640px) 
+{
+	.Card_Container
+	{
+		grid-template-columns: 90% 10%;
+	}
+}
+
+.Card_Container:active
+{
+	opacity: 0.5;
+}
+
+.Card_Information
+{
+	padding: 1rem;
+}
+
+.Open_Customization_Button
+{
+	align-self: center;
+	width: 100%;
+}
+
+.Close_Customization_Button
+{
+	align-self: center;
+	transform: rotate(180deg);
+	width: 100%;
+}
+
+.Open_Customization_Animation
+{
+	animation-name: Open_Customization;
+	animation-duration: 375ms;
+	animation-timing-function: linear;
+}
+
+.Close_Customization_Animation
+{
+	animation-name: Close_Customization;
+	animation-duration: 375ms;
+	animation-timing-function: linear;
+}
+
+@keyframes Open_Customization
+{
+	from
+	{
+		transform: rotate(0deg);
+	}
+	to
+	{
+		transform: rotate(180deg);
+	}
+}
+
+@keyframes Close_Customization
+{
+	from
+	{
+		transform: rotate(180deg);
+	}
+	to
+	{
+		transform: rotate(0deg);
+	}
+}
