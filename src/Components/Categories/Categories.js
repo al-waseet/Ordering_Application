@@ -13,7 +13,7 @@ const Categories = ({Colors, Sections, Section_References}) =>
 		infinite: true,
 		speed: 500,
 		slidesToShow: 4,
-		slidesToScroll: 2,
+		slidesToScroll: 4,
 		responsive: 
 		[
 			{
@@ -25,7 +25,7 @@ const Categories = ({Colors, Sections, Section_References}) =>
 				}
 			},
 			{
-				breakpoint: 480,
+				breakpoint: 600,
 				settings: 
 				{
 					slidesToShow: 2,

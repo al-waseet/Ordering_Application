@@ -17,6 +17,7 @@ const Menu = () =>
 {
 	const Cart_Context = useContext (CartStateContext);
 	const [displayStatuses, setDisplayStatuses] = useState ({});
+	const [Language, Set_Language] = useState ('en-US');
 	const Section_References = useRef ([]);
 	const Restaurant_and_Menu = useRestaurantFetch ();
 	
@@ -46,7 +47,7 @@ const Menu = () =>
 
 	return (
 		<>
-			<Header Colors={Restaurant_and_Menu.Colors} Logo={Restaurant_and_Menu.Logo} Name={Restaurant_and_Menu.Name} Website={Restaurant_and_Menu.Website}></Header>
+			<Header Colors={Restaurant_and_Menu.Colors} Language={Language} Logo={Restaurant_and_Menu.Logo} Name={Restaurant_and_Menu.Name} Set_Language={Set_Language} Website={Restaurant_and_Menu.Website}></Header>
 			<Categories Colors={Restaurant_and_Menu.Colors} Sections={Restaurant_and_Menu.Categories} Section_References={Section_References}></Categories>
 			<div className='Menu' key='Menu_Key' style={{backgroundColor: Restaurant_and_Menu.Colors.Background, color: Restaurant_and_Menu.Colors.Text}}>
 				{
