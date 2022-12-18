@@ -6,12 +6,14 @@ import { Add_to_Cart, CartDispatchContext, Clear_Cart, Remove_from_Cart } from '
 import { CartStateContext } from '../../Providers/Cart';
 import Header from '../../Components/Header/Header'
 import Navigation_Bar from '../../Components/Navigation_Bar/Navigation_Bar';
+import Spinner from '../../Components/Spinner/Spinner';
+import Quantity_Controller from '../../Components/Quantity_Controller/Quantity_Controller';
 import { useContext } from 'react';
 import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useRestaurantFetch } from '../../Hooks/useRestaurantFetch';
 import { useTitle } from '../../Hooks/useTitle';
-import Quantity_Controller from '../../Components/Quantity_Controller/Quantity_Controller';
+
 
 const Cart = () =>
 {
@@ -33,7 +35,7 @@ const Cart = () =>
 
 	if (Object.keys (restaurant).length === 0)
 	{
-		return <div>Loading...</div>
+		return <div className='Loading_Page'><Spinner></Spinner></div>
 	}
 
 	const Decrease_Item_Count_by_One = (Cart_Item) =>

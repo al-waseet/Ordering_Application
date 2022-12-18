@@ -9,6 +9,7 @@ import Floating_Action_Button from '../../Components/Floating_Action_Button/Floa
 import Header from '../../Components/Header/Header';
 import './Menu.css';
 import React, { useContext, useEffect, useState, useRef } from 'react';
+import Spinner from '../../Components/Spinner/Spinner';
 import { useRestaurantFetch } from '../../Hooks/useRestaurantFetch';
 import { useTitle } from '../../Hooks/useTitle';
 
@@ -19,7 +20,6 @@ const Menu = () =>
 	const [Language, Set_Language] = useState ('en-US');
 	const Section_References = useRef ([]);
 	const Restaurant_and_Menu = useRestaurantFetch ();
-	
 	useTitle (Restaurant_and_Menu.Name + ' Menu');
 
 	const Toggle_the_Customization_Menu = (ID) =>
@@ -41,7 +41,7 @@ const Menu = () =>
 
 	if (Object.keys (Restaurant_and_Menu).length === 0/* || Section_References.current.length === 0*/)
 	{
-		return <div>Loading...</div>
+		return <div className='Loading_Page'><Spinner></Spinner></div>
 	}
 
 	return (
