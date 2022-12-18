@@ -12,7 +12,6 @@ import React, { useContext, useEffect, useState, useRef } from 'react';
 import { useRestaurantFetch } from '../../Hooks/useRestaurantFetch';
 import { useTitle } from '../../Hooks/useTitle';
 
-
 const Menu = () =>
 {
 	const Cart_Context = useContext (CartStateContext);
