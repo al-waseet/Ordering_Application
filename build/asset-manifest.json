@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/static/css/main.f49880fe.css",
+    "main.js": "/static/js/main.37db915a.js",
+    "static/media/Not_Found_Page_Background_Photo_Left_Alignment.jpg": "/static/media/Not_Found_Page_Background_Photo_Left_Alignment.7cc0afaa6106517cb656.jpg",
+    "index.html": "/index.html",
+    "static/media/Arrow_Down.svg": "/static/media/Arrow_Down.25503e86ebdb99d7556b3d3ff25a7f71.svg"
+  },
+  "entrypoints": [
+    "static/css/main.f49880fe.css",
+    "static/js/main.37db915a.js"
+  ]
+}
