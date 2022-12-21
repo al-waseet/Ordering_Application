@@ -2,6 +2,7 @@
 	"name": "al-waseet-ordering-application",
 	"version": "1.0.0",
 	"private": true,
+    "homepage": "/menu",
 	"dependencies": {
 		"react": "^18.1.0",
 		"react-dom": "^18.1.0",
