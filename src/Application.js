@@ -6,12 +6,12 @@ import Menu from './Pages/Menu/Menu';
 import Not_Found from './Pages/Not_Found/Not_Found';
 
 const Application = () => (
-	<Router key='Router_Key'>
+	<Router basename='/menu' key='Router_Key'>
 		<Cart_Provider key='Cart_Provider_Key'>
 			<Routes key='Routes_Key'>
-				<Route key='Menu_Route_Key' path='/menu/preview' element={<Menu />} />
-				<Route key='Menu_Route_Key' path='/menu/:Restaurant_ID/:Table_ID' element={<Menu />} />
-				<Route key='Cart_Route_Key' path='/menu/:Restaurant_ID/:Table_ID/cart' element={<Cart />} />
+				<Route key='Menu_Route_Key' path='/preview' element={<Menu />} />
+				<Route key='Menu_Route_Key' path='/:Restaurant_ID/:Table_ID' element={<Menu />} />
+				<Route key='Cart_Route_Key' path='/:Restaurant_ID/:Table_ID/cart' element={<Cart />} />
 				<Route key='Miscellaneous_Route_Key' path='/*' element={<Not_Found />} />
 			</Routes>
 		</Cart_Provider>
