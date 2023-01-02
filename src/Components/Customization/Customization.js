@@ -52,13 +52,13 @@ const Customization = ({Addons, Colors, ID, Image_URL, Name, Price}) =>
 
     return (
         <div className='Customization_Section'>
-            <div className='Uncountable_Addons'>
+            {addonsQuantities.filter (Addon => !Addon.Countable).length > 0 ? <div className='Uncountable_Addons'>
                 <h2>Add-ons</h2>
                 <div className='Selectors'>
                     {addonsQuantities.filter (Addon => !Addon.Countable).map (Addon => (<Checkbox Checked_Status={Addon.Quantity === 0 ? false : true} Color={Colors.Button} Function={Addon.Quantity === 0 ? () => (Increase_Ingredient_Quantity_by_One (Addon)) : () => (Decrease_Ingredient_Quantity_by_One (Addon))} Label={Addon.Name + ` (+ AED ${Addon.Price})`}></Checkbox>))}
                 </div>
-            </div>
-            <div className='Countable_Addons'>
+            </div> : null}
+            {addonsQuantities.filter (Addon => Addon.Countable).length > 0 ? <div className='Countable_Addons'>
                 <h2>Side Dishes</h2>
                 {
                     addonsQuantities.filter (Addon => Addon.Countable).map (Addon => (
@@ -68,7 +68,7 @@ const Customization = ({Addons, Colors, ID, Image_URL, Name, Price}) =>
                         </div>
                     ))
                 }
-            </div>
+            </div> : null}
             <div className='Notes_Container'>
                 <h2>Notes</h2>
                 <input className='Notes' placeholder='Notes' onChange={(Event) => setNotes (Event.target.value)} style={{borderBottom: '1px ' + Colors.Text + ' solid', color: Colors.Text}} type="text" />

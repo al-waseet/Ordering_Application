@@ -6,12 +6,17 @@
     height: 100vh;
 }
 
+.Menu
+{
+    padding-top: 1rem;
+}
+
 .Menu_Item
 {
 	margin-left: 1rem;
 	margin-right: 1rem;
-	padding-bottom: 0.5rem;
-	padding-top: 0.5rem
+	padding-bottom: 2rem;
+	padding-top: 2rem;
 }
 
 .Menu_Item:first-child
@@ -26,24 +31,14 @@
 
 .Menu_Item:last-child
 {
-	padding-bottom: 1rem;
 	border-bottom: 0 !important;
 }
 
 .Card_Container
 {
 	cursor: pointer;
-	display: grid;
-	grid-template-rows: 100%;
-	grid-template-columns: 95% 5%;
-}
-
-@media screen and (max-width: 640px) 
-{
-	.Card_Container
-	{
-		grid-template-columns: 90% 10%;
-	}
+    display: flex;
+    flex-direction: row;
 }
 
 .Card_Container:active
@@ -51,22 +46,22 @@
 	opacity: 0.5;
 }
 
-.Card_Information
+.Arrow_Button
 {
-	padding: 1rem;
+    width: 2rem;
+    margin-left: auto;
+    min-width: 2rem;
 }
 
 .Open_Customization_Button
 {
 	align-self: center;
-	width: 100%;
 }
 
 .Close_Customization_Button
 {
 	align-self: center;
 	transform: rotate(180deg);
-	width: 100%;
 }
 
 .Open_Customization_Animation
