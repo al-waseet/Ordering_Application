@@ -59,12 +59,12 @@ const Menu = () =>
 									Restaurant_and_Menu.Menu.filter (Menu_Item => Menu_Item.Category === Section.Name).map (Menu_Item => 
 									{
 										return (
-											<div className='Menu_Item' style={{borderBottom: `1px solid ${Restaurant_and_Menu.Colors.Text}`}}>
+											<div className='Menu_Item' style={{borderBottom: `1px solid rgba(${Convert_HEX_to_RGB (Restaurant_and_Menu.Colors.Text)}, 0.25)`}}>
 												<div className='Card_Container' onClick={() => Toggle_the_Customization_Menu (Menu_Item.ID)}>
 													<Card Colors={Restaurant_and_Menu.Colors} Header={Cart_Context.items.filter (Cart_Item => Cart_Item.ID === Menu_Item.ID).length === 0 ? Menu_Item.Name : (Cart_Context.items.filter (Cart_Item => Cart_Item.ID === Menu_Item.ID) [0].Quantity + " x " + Menu_Item.Name)} Image_URL={Menu_Item.Image} Subheader={"AED " + Menu_Item.Price}>
 														<p className='Menu_Item_Description'>{Menu_Item.Description}</p>
 													</Card>
-													<Arrow_Down className={displayStatuses [Menu_Item.ID] ? 'Close_Customization_Button Open_Customization_Animation': 'Open_Customization_Button Close_Customization_Animation'} fill={Restaurant_and_Menu.Colors.Text} />
+													<Arrow_Down className={'Arrow_Button' + (displayStatuses [Menu_Item.ID] ? ' Close_Customization_Button Open_Customization_Animation': ' Open_Customization_Button Close_Customization_Animation')} fill={Restaurant_and_Menu.Colors.Text} />
 												</div>
 												{displayStatuses [Menu_Item.ID] ? <Customization Addons={Menu_Item.Addons} Colors={Restaurant_and_Menu.Colors} ID={Menu_Item.ID} Image_URL={Menu_Item.Image} Name={Menu_Item.Name} Price={Menu_Item.Price}></Customization> : null}
 											</div>

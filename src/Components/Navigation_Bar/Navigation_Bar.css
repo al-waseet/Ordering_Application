@@ -10,8 +10,9 @@
 
 .Link_to_the_Menu
 {
-	font-size: 2.25rem;
 	font-weight: bold;
+    display: flex;
+    flex-direction: row;
 }
 
 .Link_to_the_Menu:link
@@ -36,4 +37,10 @@
 {
 	color: inherit;
 	text-decoration: none;
+}
+
+.Back_Icon
+{
+    padding-right: 0.5rem;
+    align-self: center;
 }

@@ -25,7 +25,7 @@
 	}
 }
 
-.Countable_Ingredients
+.Countable_Addons
 {
 	padding-top: 1rem;
 }
@@ -66,21 +66,7 @@
 
 .Notes_Container
 {
-	padding-top: 1rem;
-}
-
-.Notes
-{
-	width: 200px;
-	border: 0;
-	background-color: transparent;
-	padding-top: 1rem;
-}
-
-.Notes:focus
-{
-	border: 0;
-	outline: none;
+    padding-top: 1rem;
 }
 
 .Customization_Button_Container

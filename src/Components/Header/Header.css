@@ -5,35 +5,12 @@ header
 	flex-direction: row;
 	align-items: center;
 	align-content: center;
+    justify-content: center;
 }
 
 .Restaurant_Logo_Image
 {
-	max-width: 33%;
-}
-
-@media screen and (max-width: 1024px) 
-{
-	.Restaurant_Logo_Image
-	{
-		max-width: 40%;
-	}
-}
-
-@media screen and (max-width: 768px) 
-{
-	.Restaurant_Logo_Image
-	{
-		max-width: 50%;
-	}
-}
-
-@media screen and (max-width: 512px) 
-{
-	.Restaurant_Logo_Image
-	{
-		max-width: 75%;
-	}
+    height: 2rem;
 }
 
 .Standalone_Section

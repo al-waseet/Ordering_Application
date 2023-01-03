@@ -1,15 +1,14 @@
+import { Add_to_Cart, CartDispatchContext, Clear_Cart, Remove_from_Cart } from '../../Providers/Cart';
 import API from '../../API';
 import Button from '../../Components/Button/Button';
 import './Cart.css';
 import Card from '../../Components/Card/Card';
-import { Add_to_Cart, CartDispatchContext, Clear_Cart, Remove_from_Cart } from '../../Providers/Cart';
 import { CartStateContext } from '../../Providers/Cart';
 import Header from '../../Components/Header/Header'
 import Navigation_Bar from '../../Components/Navigation_Bar/Navigation_Bar';
 import Spinner from '../../Components/Spinner/Spinner';
 import Quantity_Controller from '../../Components/Quantity_Controller/Quantity_Controller';
-import { useContext } from 'react';
-import { useEffect } from 'react';
+import { useContext, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useRestaurantFetch } from '../../Hooks/useRestaurantFetch';
 import { useTitle } from '../../Hooks/useTitle';
@@ -57,7 +56,7 @@ const Cart = () =>
 	return (
 		<>
 			<Header Colors={restaurant.Colors} Logo={restaurant.Logo} Name={restaurant.Name} Website={restaurant.Website}></Header>
-			<Navigation_Bar Colors={restaurant.Colors} Page_Title="Cart" Previous_Page_URL={'/menu/' + Restaurant_ID + '/' + Table_ID}></Navigation_Bar>
+			<Navigation_Bar Colors={restaurant.Colors} Page_Title="Cart" Previous_Page_URL={'/' + Restaurant_ID + '/' + Table_ID}></Navigation_Bar>
 			<div className='Order' style={{backgroundColor: restaurant.Colors.Background, color: restaurant.Colors.Text}}>
 				{
 					Cart_Context.items.map (Cart_Item =>
