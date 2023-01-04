@@ -4,6 +4,7 @@ import Button from '../../Components/Button/Button';
 import './Cart.css';
 import Card from '../../Components/Card/Card';
 import { CartStateContext } from '../../Providers/Cart';
+import { Convert_HEX_to_RGB } from '../../Helpers';
 import Header from '../../Components/Header/Header'
 import Navigation_Bar from '../../Components/Navigation_Bar/Navigation_Bar';
 import Spinner from '../../Components/Spinner/Spinner';
@@ -62,7 +63,7 @@ const Cart = () =>
 					Cart_Context.items.map (Cart_Item =>
 					{
 						return (
-							<div className='Cart_Item' style={{borderBottom: `1px solid ${restaurant.Colors.Text}`}}>
+							<div className='Cart_Item' style={{borderBottom: `1px solid rgba(${Convert_HEX_to_RGB (restaurant.Colors.Text)}, 0.25)`}}>
 								<Card Colors={restaurant.Colors} Header={Cart_Item.Name} Image_URL={Cart_Item.Image_URL} Subheader={"AED " + Cart_Item.price}>
 									{
 										Cart_Item.addonsQuantities !== undefined ? 

@@ -10,11 +10,11 @@ const reducer = (state, action) =>
 	{
 		case "ADD_TO_CART":
 			let cartItems = null;
-			if (state.items.map (Item => JSON.stringify ({addonsQuantities: Item.addonsQuantities, ID: Item.ID})).includes (JSON.stringify ({addonsQuantities: action.payload.cartItem.addonsQuantities, ID: action.payload.cartItem.ID})))
+			if (state.items.map (Item => JSON.stringify ({addonsQuantities: Item.addonsQuantities, ID: Item.ID, notes: Item.notes})).includes (JSON.stringify ({addonsQuantities: action.payload.cartItem.addonsQuantities, ID: action.payload.cartItem.ID, notes: action.payload.cartItem.notes})))
 			{
 				const items = state.items.map ((item) =>
 				{
-					if (JSON.stringify ({addonsQuantities: item.addonsQuantities, ID: item.ID}) === JSON.stringify ({addonsQuantities: action.payload.cartItem.addonsQuantities, ID: action.payload.cartItem.ID}))
+					if (JSON.stringify ({addonsQuantities: item.addonsQuantities, ID: item.ID, notes: item.notes}) === JSON.stringify ({addonsQuantities: action.payload.cartItem.addonsQuantities, ID: action.payload.cartItem.ID, notes: action.payload.cartItem.notes}))
 					{
 						return {...item, Quantity: item.Quantity + 1};
 					}
@@ -33,7 +33,7 @@ const reducer = (state, action) =>
 				let Cart_Items = null;
 				const items = state.items.map ((item) =>
 				{
-					if (JSON.stringify ({addonsQuantities: item.addonsQuantities, ID: item.ID}) === JSON.stringify ({addonsQuantities: action.payload.cartItem.addonsQuantities, ID: action.payload.cartItem.ID}))
+					if (JSON.stringify ({addonsQuantities: item.addonsQuantities, ID: item.ID, notes: item.notes}) === JSON.stringify ({addonsQuantities: action.payload.cartItem.addonsQuantities, ID: action.payload.cartItem.ID, notes: action.payload.cartItem.notes}))
 					{
 						return {...item, Quantity: item.Quantity - 1};
 					}
@@ -44,7 +44,7 @@ const reducer = (state, action) =>
 			}
 			else
 			{
-				return {...state, items: state.items.filter ((item) => JSON.stringify ({addonsQuantities: item.addonsQuantities, ID: item.ID}) !== JSON.stringify ({addonsQuantities: action.payload.cartItem.addonsQuantities, ID: action.payload.cartItem.ID}))};
+				return {...state, items: state.items.filter ((item) => JSON.stringify ({addonsQuantities: item.addonsQuantities, ID: item.ID, notes: item.notes}) !== JSON.stringify ({addonsQuantities: action.payload.cartItem.addonsQuantities, ID: action.payload.cartItem.ID, notes: action.payload.cartItem.notes}))};
 			}
 		case "CLEAR_CART":
 			return {...state, ...{items: []}};

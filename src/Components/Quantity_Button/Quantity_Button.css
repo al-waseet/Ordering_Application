@@ -1,7 +1,7 @@
 .Quantity_Button
 {
 	background: transparent;
-	border-radius: 8px;
+	border-radius: 0.5rem;
 	font-weight: bold;
 	font-size: 1rem;
 	width: 1.5rem;
