@@ -61,7 +61,7 @@ const Menu = () =>
 										return (
 											<div className='Menu_Item' style={{borderBottom: `1px solid rgba(${Convert_HEX_to_RGB (Restaurant_and_Menu.Colors.Text)}, 0.25)`}}>
 												<div className='Card_Container' onClick={() => Toggle_the_Customization_Menu (Menu_Item.ID)}>
-													<Card Colors={Restaurant_and_Menu.Colors} Header={Cart_Context.items.filter (Cart_Item => Cart_Item.ID === Menu_Item.ID).length === 0 ? Menu_Item.Name : (Cart_Context.items.filter (Cart_Item => Cart_Item.ID === Menu_Item.ID) [0].Quantity + " x " + Menu_Item.Name)} Image_URL={Menu_Item.Image} Subheader={"AED " + Menu_Item.Price}>
+													<Card Colors={Restaurant_and_Menu.Colors} Header={Cart_Context.items.filter (Cart_Item => Cart_Item.ID === Menu_Item.ID).length === 0 ? Menu_Item.Name : (<><span style={{color: Restaurant_and_Menu.Colors.Button}}>{Cart_Context.items.filter (Cart_Item => Cart_Item.ID === Menu_Item.ID).map (Cart_Item => Cart_Item.Quantity).reduce ((Sum, Quantity) => Sum + Quantity, 0)} x</span> {Menu_Item.Name}</>)} Image_URL={Menu_Item.Image} Subheader={"AED " + Menu_Item.Price}>
 														<p className='Menu_Item_Description'>{Menu_Item.Description}</p>
 													</Card>
 													<Arrow_Down className={'Arrow_Button' + (displayStatuses [Menu_Item.ID] ? ' Close_Customization_Button Open_Customization_Animation': ' Open_Customization_Button Close_Customization_Animation')} fill={Restaurant_and_Menu.Colors.Text} />

@@ -41,6 +41,11 @@
 
 .Back_Icon
 {
-    padding-right: 0.5rem;
+    padding-right: 1rem;
     align-self: center;
+}
+
+.Previous_Page
+{
+    font-weight: normal;
 }

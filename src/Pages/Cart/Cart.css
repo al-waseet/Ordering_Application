@@ -8,10 +8,10 @@
 
 .Cart_Item
 {
-	display: grid;
-	grid-template-rows: 100%;
-	grid-template-columns: 90% 10%;
-    padding: 1rem;
+	display: flex;
+	flex-direction: row;
+    margin: 1rem;
+    padding-bottom: 1rem;
 }
 
 .Cart_Item:last-child
@@ -22,7 +22,7 @@
 .Cart_Item_Quantities
 {
     align-self: center;
-    justify-self: end;
+    margin-left: auto;
 }
 
 .Total_Price
@@ -30,7 +30,6 @@
 	margin-top: 0;
 	margin-bottom: 0;
 	padding-left: 1rem;
-	padding-top: 1rem;
 }
 
 .Ordering_Button_Container

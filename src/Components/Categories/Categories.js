@@ -51,7 +51,7 @@ const Categories = ({Colors, Sections, Section_References}) =>
 		}
 	}
 
-	return <nav className='Categories' key='Menu_Categories_Key' ref={Navigation_Bar_Reference} style={{backgroundColor: Colors.Background, color: Colors.Text, top: Navigation_Bar_Reference.current ? (Navigation_Bar_Reference.current.children [0].children [1].clientHeight - Navigation_Bar_Reference.current.clientHeight).toString () + 'px' : '0px'}}>
+	return <nav className='Categories' key='Menu_Categories_Key' ref={Navigation_Bar_Reference} style={{backgroundColor: Colors.Background, color: Colors.Text}}>
 			<Slider {...settings}>
 			{
                 Sections.map ((Category, Index) => 

@@ -1,7 +1,8 @@
 .Categories
 {
-	padding: 0;
+	padding: 1rem 0;
 	position: sticky;
+    top: 0;
 }
 
 .Category
@@ -23,17 +24,9 @@
 	border-radius: 0.5rem;
 }
 
-@media screen and (max-width: 640px) 
-{
-	.Category_Image
-	{
-		max-width: 7.5rem;
-		border-radius: 0.5rem;
-	}
-}
-
 .Category_Name
 {
+    padding-top: 0.25rem;
 	text-align: center;
 	font-weight: bold;
 }
