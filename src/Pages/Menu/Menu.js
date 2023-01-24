@@ -56,7 +56,7 @@ const Menu = () =>
 							<div className='Section' key={Section.Name.replace (' ', '_') + '_Section_Key'} ref={Section_Reference => Section_References.current [Index] = Section_Reference}>
 								<Banner Banner_Image={Section.Banner_Image} Color={Convert_HEX_to_RGB (Restaurant_and_Menu.Colors.Background)} Title={Section.Name}></Banner>
 								{
-									Restaurant_and_Menu.Menu.filter (Menu_Item => Menu_Item.Category === Section.Name).map (Menu_Item => 
+									Restaurant_and_Menu.Menu.filter (Menu_Item => Menu_Item.Category === Section.ID).map (Menu_Item => 
 									{
 										return (
 											<div className='Menu_Item' style={{borderBottom: `1px solid rgba(${Convert_HEX_to_RGB (Restaurant_and_Menu.Colors.Text)}, 0.25)`}}>

@@ -12,12 +12,12 @@ export const useRestaurantFetch = () =>
 	{
 		if (Restaurant_ID === undefined)
 		{
-			const Restaurant_Preview_Channel = new BroadcastChannel ('Restaurant_Preview');
-			Restaurant_Preview_Channel.addEventListener ('message', Event =>
-			{
-				console.log (Event)
-				setRestaurant (JSON.parse (Event.data))
-			});
+			const Socket = new WebSocket ('ws://localhost:3030');
+
+            Socket.addEventListener ('message', (Event) => 
+            {
+                console.log('Message from server ', Event.data);
+            });
 		}
 		else
 		{
