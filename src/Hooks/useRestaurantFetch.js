@@ -12,7 +12,12 @@ export const useRestaurantFetch = () =>
 	{
 		if (Restaurant_ID === undefined)
 		{
-			const Socket = new WebSocket ('ws://localhost:3030');
+			const Socket = new WebSocket ('ws://localhost:3031');
+
+			Socket.addEventListener ('open', (Event) => 
+            {
+                console.log(1);
+            });
 
             Socket.addEventListener ('message', (Event) => 
             {
